@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Keep ES2022 if you need to target that version
+    "lib": ["ES2022", "DOM"], // Match the lib version with the target
+    "module": "ESNext", // Keep this for ESNext modules
+    "skipLibCheck": true, // To skip type checking for all declaration files
+
+    /* Bundler Mode */
+    "moduleResolution": "bundler", // For bundler compatibility
+    "allowImportingTsExtensions": true, // Allow importing TypeScript files directly
+    "isolatedModules": true, // To ensure each file is treated as an isolated module
+    "moduleDetection": "force", // Enforces module detection
+
+    /* No Emit */
+    "noEmit": true, // Doesn't generate output files, useful for type checking
+
+    /* Linting */
+    "strict": true, // Enables all strict type checking options
+    "noUnusedLocals": false, // Set this to false to avoid issues with unused variables
+    "noUnusedParameters": false, // Set this to false to avoid issues with unused function parameters
+    "noFallthroughCasesInSwitch": true // To catch fall-through behavior in switch statements
+  },
+  "include": [
+    "vite.config.ts", // Adjust based on your project structure (add other necessary files or folders)
+    "src/**/*.ts", // Add src for full TypeScript files
+    "src/**/*.tsx" // Add src for React TypeScript files if applicable
+  ],
+  "exclude": [
+    "node_modules" // Always exclude node_modules
+  ]
+}
